@@ -11,15 +11,31 @@ All cores can be found in the [verilog](/verilog/) directory.
 
 ## LiteX Cores
 
-- [CVA5](https://github.com/openhwgroup/cva5): [generated core in subrepo](/verilog/Cva5)
-- [CVA6](https://github.com/openhwgroup/cva6): [generated core in subrepo](/verilog/Cva6)
-- [Ibex](https://github.com/lowRISC/ibex): [generated core in subrepo](/verilog/Ibex)
-- [Nax](https://github.com/SpinalHDL/NaxRiscv): [generated core in build directory](/verilog/NaxRiscv)
-- [OpenC906](https://github.com/XUANTIE-RV/openc906): [generated core in subrepo](/verilog/OpenC906)
-- [Rocket Chip](https://github.com/ucb-bar/rocket-chip): [generated core in subrepo](/verilog/Rocket)
-- [Vex](https://github.com/SpinalHDL/VexRiscv): [generated core in subrepo](/verilog/VexRiscv)
-- [Vex SMP](https://github.com/SpinalHDL/VexRiscv): [generated core in subrepo](/verilog/VexRisc-SMP)
-- [Vex II](https://github.com/SpinalHDL/VexiiRiscv): [generated core in build directory](/verilog/VexiiRiscv)
+These cores are simple copies of the original LiteX sub-repositories:
+- [CVA5](verilog/CVA5/) ([upstream](https://github.com/openhwgroup/cva5)) is a copy of `LiteX/pythondata-cpu-cva5/pythondata_cpu_cva5/system_verilog/core/`
+- [CVA6](verilog/CVA6/) ([upstream](https://github.com/openhwgroup/cva6)) is a copy of `LiteX/pythondata-cpu-cva6/pythondata_cpu_cva6/system_verilog/core/`
+- [Ibex](verilog/Ibex/) ([upstream](https://github.com/lowRISC/ibex)) is a copy of `LiteX/pythondata-cpu-ibex/pythondata_cpu_ibex/system_verilog/rtl/`
+- [Rocket](verilog/Rocket/) ([upstream](https://github.com/ucb-bar/rocket-chip)) is a copy of `LiteX/pythondata-cpu-rocket/pythondata_cpu_rocket/verilog/generated-src/`
+- [OpenC906](verilog/OpenC906/) ([upstream](https://github.com/XUANTIE-RV/openc906)) is a copy of `LiteX/pythondata-cpu-openc906/pythondata_cpu_openc906/verilog/C906_RTL_FACTORY/gen_rtl/`
+- [Vex](verilog/Vex/) ([upstream](https://github.com/SpinalHDL/VexRiscv)) is a copy of `LiteX/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/`
+
+The exception are Nax and VexII which were generated using LiteX:
+- [Nax](verilog/Nax/) ([upstream](https://github.com/SpinalHDL/NaxRiscv)) is a copy of `LiteX/pythondata-cpu-naxriscv/pythondata_cpu_naxriscv/verilog/`
+with the `git status` reporting these generated files inside the submodule:
+```
+Untracked files:
+	NaxRiscvLitex_8627c7bc2ad1ab7b8f472a89b62e78d0.v
+	ext/
+```
+- [VexII](verilog/VexII/) ([upstream](https://github.com/SpinalHDL/VexiiRiscv)) is a copy of ../LiteX/pythondata-cpu-vexiiriscv/pythondata_cpu_vexiiriscv/verilog
+with the `git status` reporting these generated files inside the submodule:
+```
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	6e67a86d10b7a5232e967e5cc469db35.py
+	VexiiRiscvLitex_079e876955aaba9eca1f0830e46c699a.v
+	ext/
+```
 
 ### How the LiteX CPUs were generated
 
